@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 var htmlWebpackPlugin = require('html-webpack-plugin');
 var extractTextPlugin = require("extract-text-webpack-plugin");
-var cleanWebpackPlugin = require('clean-webpack-plugin')
+var webpackCleanupPlugin = require('webpack-cleanup-plugin')
 var config = require('./config.js')
 
 var resolve = {
@@ -83,7 +83,7 @@ for (let key in config.html) {
 
 switch (process.env.npm_lifecycle_event) {
     case "release":
-        plugins.push(new cleanWebpackPlugin(output.path))
+        plugins.push(new webpackCleanupPlugin())
         var devServer = {
             contentBase: output.path,
             port: 8888

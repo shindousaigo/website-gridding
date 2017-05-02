@@ -9,7 +9,6 @@
     "@types/jquery": "^2.0.42",
     "@types/node": "^7.0.15",
     "autoprefixer": "^6.7.7",
-    "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.10.1",
@@ -27,6 +26,7 @@
     "typescript": "^2.1.4",
     "url-loader": "^0.5.8",
     "webpack": "^1.15.0",
+    "webpack-cleanup-plugin": "^0.5.1",
     "webpack-dev-server": "^1.16.5"
   },
   "description": "website-gridding makes easily gridding css on ie8 which is dependents on jquery@1+ and ie8-love components",
