@@ -1,0 +1,36 @@
+{
+  "name": "ie-love",
+  "version": "0.0.2",
+  "description": "Combo polyfill for IE8 and below.",
+  "main": "dist/ie-love.min.js",
+  "scripts": {
+    "build": "npm-run-all build:**",
+    "build:clean": "trash ./bower_components; trash ./dist; bower cache clean",
+    "build:bower": "bower install",
+    "build:update": "bower update",
+    "build:mkdir": "mkdir ./dist",
+    "build:concat": "concat-files bower_components/calc-polyfill/dist/calc.js bower_components/selectivizr2/selectivizr2.js bower_components/respond/dest/respond.src.js -o ./dist/ie-love.js",
+    "build:uglify": "uglifyjs ./dist/ie-love.js -o ./dist/ie-love.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/corysimmons/ie-love.git"
+  },
+  "keywords": [
+    "ie8",
+    "polyfill"
+  ],
+  "author": "Cory Simmons",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/corysimmons/ie-love/issues"
+  },
+  "homepage": "https://github.com/corysimmons/ie-love",
+  "devDependencies": {
+    "bower": "^1.7.7",
+    "concat-file-array-cli": "0.0.2",
+    "npm-run-all": "^1.5.1",
+    "trash-cli": "^1.2.0",
+    "uglify-js": "^2.6.1"
+  }
+}
