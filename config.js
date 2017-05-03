@@ -1,20 +1,24 @@
-const path = require("path")
+const path = require('path')
 
-const output = {
-    path: "ant-grid",
-}
-
-output.entry = {
-    index: [
-        path.join(__dirname, 'bower_components', 'jquery/dist/jquery.js'),
-        path.join(__dirname, 'examples', output.path, 'index.ts'),
+var output = {
+  path: 'ant-grid',
+  entry: {
+    main: [
+      path.resolve('bower_components', 'jquery/dist/jquery.js'),
+      path.resolve('examples', 'ant-grid', 'index.ts'),
     ],
-    'ie8-care': [
-        path.join(__dirname, 'bower_components', 'ie-love/dist/ie-love.js')
+    ie8care: [
+      // 使ie8兼容query media
+      path.resolve('bower_components', 'respond/index.js'),
+      // 使ie8兼容vw,vh,vmin 
+      path.resolve('bower_components', 'vminpoly/index.js')
     ]
+  },
+  html: {
+    index: ['main', 'ie8care']
+  }
 }
-output.html = {
-    index: ['index', 'ie8-care'],
-}
+
+
 
 module.exports = output

@@ -1,6 +1,7 @@
 /*
 fillcalc v0.1.0 - (c) Robert Weber, freely distributable under the terms of the MIT license.
 */
+w = self;
 
 (function (win, doc) {
 
@@ -1216,7 +1217,7 @@ function contentLoaded(win, fn) {
 			addEvent(win,"load", init);
 		}
 	}
-})(self);
+})(w);
 /*! matchMedia() polyfill - Test a CSS media type/query in JS. Authors & copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Zakas. Dual MIT/BSD license */
 /*! NOTE: If you're already including a window.matchMedia polyfill via Modernizr or otherwise, you don't need this part */
 (function(w) {
@@ -1238,7 +1239,7 @@ function contentLoaded(win, fn) {
       };
     };
   }(w.document);
-})(self);
+})(w);
 
 /*! Respond.js v1.4.0: min/max-width media query polyfill. (c) Scott Jehl. MIT Lic. j.mp/respondjs  */
 (function(w) {
@@ -1440,4 +1441,4 @@ function contentLoaded(win, fn) {
   } else if (w.attachEvent) {
     w.attachEvent("onresize", callMedia);
   }
-})(self);
+})(w);

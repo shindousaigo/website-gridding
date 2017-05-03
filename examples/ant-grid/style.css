@@ -1,58 +1,46 @@
-@ant-technique negative-margin;
-@ant-support float;
-
 /**
-ie-8 care 
-css 兼容 query media 部分 css3选择器 以及cacl表达式的 网页自适应布局方案
+
+IE8 care which
+css is compatible with
+media query 
+vw,vh,vmin
+(relative components)
+postcss: [
+  postcss-simple-vars
+  postcss-media-minmax
+]
+
 **/
 
-#section {
-    $height: 20px;
-    $golden: 1.618;
-    $columns: columns(ratio($golden, 1) ratio($golden, 2) ratio($golden, 3) ratio($golden, 4) ratio($golden, 5));
-    $rows: rows(100px, 90px, 50px, 90px, 100px);
-    gg: $columns $rows gutter(0);
-    div {
-        background: pink;
-        &:nth-child(even) {
-            background: #888;
-        }
-        &:nth-child(2) {
-            background: gold;
-        }
-    }
+div {
+  float: left;
+  background: #e69;
+  height: 150px;
+  clear: both;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  display: table;
+  width: 80vw;
+  min-width: 756px;
+  span {
+    font-size: 5vw;
+    display: table-cell;
+    vertical-align: middle;
+  }
 }
 
-#bump {
-    $midWidth: 1/6;
-    $perWidth: 1/3;
-    gg: columns($perWidth $midWidth $perWidth) rows($height) gutter(0);
-    div {
-        background: red;
+@media screen and (max-width:(756/0.8+px)) {
+  div {
+    background: green;
+    span {
+      font-size: 756/0.8*5/100+px !important;
     }
-    .short {
-        background: #888;
-        margin: 0 ($perWidth - $midWidth)/2*100% !important;
-    }
+  }
 }
 
-@media screen and (width<=756px) {
-    #section {
-        gg: rows(75px) gutter(0);
-        div {
-            width: 100% !important;
-        }
-    }
-    #bump {
-        $midWidth: 1/10;
-        div {
-            height: 75px !important;
-            background: #000;
-        }
-        .short {
-            background: #156;
-            margin: 0 ($perWidth - $midWidth)/2*100% !important;
-            width: $midWidth*100% !important;
-        }
-    }
+@media screen and (width<=860px) {
+  div {
+    background: #000;
+  }
 }
