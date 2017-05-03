@@ -39,8 +39,14 @@ div {
   }
 }
 
-@media screen and (width<=860px) {
+@media screen and (width<=850px) {
   div {
     background: #000;
+  }
+}
+
+@media screen and (width<=450px) {
+  div {
+    text-align: left;
   }
 }

@@ -70,7 +70,7 @@ for (let key in config.html) {
     chunks.push(e)
   }, this);
   plugins.push(new htmlWebpackPlugin({
-    template: './examples/' + config.path + '/' + key + '.html',
+    template: './src/' + config.path + '/' + key + '.html',
     inject: false,
     minify: {
       removeComments: true,
@@ -92,7 +92,7 @@ switch (process.env.npm_lifecycle_event) {
     break;
   default:
     var devServer = {
-      contentBase: './examples/' + config.path,
+      contentBase: './src/' + config.path,
       port: 8080
     }
     break;

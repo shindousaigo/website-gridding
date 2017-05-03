@@ -5,7 +5,7 @@ var output = {
   entry: {
     main: [
       path.resolve('bower_components', 'jquery/dist/jquery.js'),
-      path.resolve('examples', 'ant-grid', 'index.ts'),
+      path.resolve('src', 'ant-grid', 'index.ts'),
     ],
     ie8care: [
       // 使ie8兼容query media

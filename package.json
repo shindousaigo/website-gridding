@@ -30,7 +30,7 @@
     "webpack-cleanup-plugin": "^0.5.1",
     "webpack-dev-server": "^1.16.5"
   },
-  "description": "website-gridding makes easily gridding css on ie8 which is dependents on jquery@1+ and ie8-love components",
+  "description": "website-gridding makes easily gridding css on ie8",
   "devDependencies": {},
   "repository": {
     "type": "git",
